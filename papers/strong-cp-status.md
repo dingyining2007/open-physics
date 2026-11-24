@@ -208,7 +208,7 @@ arXiv:2609.00620 的 Part IV 直接问：「Is there really a strong CP problem?
 
 | 质疑 | 内容 | 原始文献（已核） |
 |---|---|---|
-| **Caveat 1：规范冗余** | 传统 θ-vacuum 构造假设"可容许规范变换在空间无穷远处趋于常数"。**这个限制不在正则哈密顿形式里**。放开来后，配合完全规范固定 + 哈密顿量厄米性，物理态空间进一步受限，**不存在基矢不变量 θ 参数** | Ai, Garbrecht, Tamarit, **arXiv:2403.00747**「The QCD theta-parameter in canonical quantization」【实测·已核摘要】 |
+| **Caveat 1：规范冗余** | 传统 θ-vacuum 构造假设"可容许规范变换在空间无穷远处趋于常数"，并把跨扇区激发的叠加当作物理态。**这个限制不在正则哈密顿形式里**；且跨扇区叠加在规范固定内积下不可归一化。放开来后，配合完全规范固定 + 哈密顿量厄米性，物理态空间受限到只剩一个 θ⁽ⁱ⁾（与 θ−θ_Π 相消）——**是「θ 被定死并相消」，不是「θ 不存在」** | Ai, Garbrecht, Tamarit, **arXiv:2403.00747**「The QCD theta-parameter in canonical quantization」**v1【读码】**（2026-11-25，见下）；⚠️ 同日核：辩护方 2510.18951 正文对本文零回应 |
 | **Caveat 2：拓扑扇区与极限顺序** | Euclid 路径积分传统做法是**先对整数拓扑扇区求和（有限体积），再取无穷体积极限**。该工作主张反过来：**先取无穷体积极限（固定拓扑荷），再求和**。此时质量项与瞬子效应的手征相位**对齐**，无额外相位时不产生 CP 破坏 | Ai, Cruz, Garbrecht, Tamarit, **arXiv:2001.07152**（PLB 822, 136616）【实测·已核摘要】 |
 
 **第二条的原摘要我读到了，逐字要点**：
@@ -232,9 +232,92 @@ arXiv:2609.00620 的 Part IV 直接问：「Is there really a strong CP problem?
   **"θ̄ 不是一个局域可观测的相位；nEDM 依赖的是 Δn 而非 θ̄"**。这比"极限顺序之争"强得多，也危险得多。
 - 由于第 1、2、5 点，**这条质疑的可攻击面在"公理 + 近似"，而不在"推导"**。任何反驳必须先撞
   ①无穷远处边界条件该不该是纯规范、②稀薄瞬子气体能否代表真实 QCD、③Ω→∞ 与子体积 Ω₁ 的磁化率
-  是否真的可分——这三点恰好就是 2510.18951 的落点（P3 待读，届时逐条对照）。
+  是否真的可分。
 - 本节原写"**双方都拿已被测到的量当裁判，但都没提出新的、能杀死对方的测量**"——**保留不改**：
   读完全文后这句更站得住，因为第 3、4 点恰恰是**在重新解释同一个 eDM / 磁化率数据**。
+
+**P3 · 2026-11-25 升级为【读码】：2510.18951（辩护方「Clearing up the Strong CP problem」）v1 全文已通读。**
+PDF 取件【实测】：`curl -x socks5h://127.0.0.1:10808 -L https://arxiv.org/pdf/2510.18951` → HTTP 200，
+863,330 B，`file` 初报 **1 page(s)** → **按 TOOLS 铁律判为截断，重下后 `pypdf` 读出 23 页**
+（arXiv 元数据 comment：23 pages, 1 figure）。pypdf 抽出 107,385 字符，§I–§VI 与附录 A–C 全部读完。
+⚠️ 注意：`file` 报 "1 page(s)" 而实际 23 页，**说明 `file` 的页数对这份 PDF 不可靠**，本轮以 pypdf `len(reader.pages)=23` 为准。
+
+**这篇的重要程度要先说清**：它**不是**对 Caveat 1/2 的逐条技术反驳，而是**两件事各占一半**——
+(i) 为"离散对称解"，特别是**量子引力下 gauged discrete P/CP**，做辩护；(ii) 用 §V 集中炮轰 2404.16026（= 引文 [32]）。
+**全文对 2403.00747（Caveat 1 的原始文献）只出现在参考文献 [29]，未做任何实质批驳**；对 2001.07152 也未点名批评。
+⇒ **P3 原任务里"把反驳的具体论点补进 6.1 节"只能部分完成**：它的炮口主要对着 Caveat 2 那一系（2404.16026），
+Caveat 1 不在其打击面内。**这一条本身就是结论，必须写进来**。
+
+| # | 正文实际说了什么（关键措辞均原文） | 位置 | 依据 |
+|---|---|---|---|
+| 1 | **§V 只点 ref [32] = 2404.16026 一个靶子**："We focus on the claim of Ref. [32] that boundary conditions in the path integral set the neutron EDM to zero." 引注写 "([32] (see also [28, 30]))"。2403.00747 仅列在参考文献 [29]，正文零处实质讨论 | §V 开头、参考文献 | 【读码】 |
+| 2 | **核心反驳是「极限顺序 + 环上粒子」精确可解模型**（见下条）：在 1+1 维环上粒子的 **有限 β** 下，先取 N→∞（先求和）得 χ_t = 1/(4π²m)，与两点函数直算一致；先取 β→∞（先取无穷体积极限）则得 **χ_t = 0**。原文断言后者 "is clearly incorrect" | §V A、Eqs.(30)–(37) | 【读码】 |
+| 3 | **用 η′ 质量做物理裁判**：Witten–Veneziano 关系 m²_η′ ≈ (4N_f/f²_π)·χ_YM，实测 m_η′ ≈ 957 MeV ⇒ χ_YM ≠ 0；引格点纯 SU(3) 值 **χ_YM ≈ 190 MeV**（原文此处单位写 MeV，量纲应为 MeV⁴，**原文的写法**）。⇒ 若按质疑方顺序，χ_YM = 0，与实测 η′ 质量矛盾 | §V A、Eq.(38)+脚注 12 | 【读码】 |
+| 4 | **第二条反驳：ChPT 里 θ̄ 依赖是教科书结果，且 EFT 不知道拓扑扇区**——它只通过 Wilson 系数知道。原文据此把矛盾归给质疑方："The claim of Ref. [32] would imply that this textbook result is incorrect, despite χ-PT being an effective theory ... knowing nothing of the topological sectors of QCD other than through Wilson coefficients" | §V B 开头 | 【读码】 |
+| 5 | **具体指出质疑方在 ChPT 里做的错步**：质疑方取 ξ = −arg det M，原文说这一取法 "is **not consistent with QCD**"，因为它让 EFT 在 (42) 式的 M、U 联合旋转下不变**而不伴随 θ 的位移**，而这不是 QCD 的对称性。⇒ 反过来说：**只要正确施加 U(1)_A 反常变换 (42)，ChPT 必然依赖 θ̄** | §V B、Eqs.(39)–(42) | 【读码】 |
+| 6 | **给出更一致（但自称 still heuristic）的 1/N_c 构造**：要求 U(1)_A 正确变换 + 禁闭 + 大 N_c 领头阶 ⇒ (43) 式含 −θ̄q(x) 与 q² 项，消去 q(x) 得 (44) 式 —— **η′ 质量 ∝ 1/N_c、θ̄ 以 (θ̄ − i/2 Tr[log U − log U†])² 形式进势能**。这是针对"质疑方说 ChPT 与 θ̄ 无关"的建设性反构造 | §V B、Eqs.(43)(44) | 【读码】 |
+| 7 | **本文自认的软处：它只证明"问题是真的"，不证明"离散解好做"**。§VI 明说 (ii) 是 "an 'in principle' statement ... we do **not** develop new models"；且反复强调 "this does not mean that constructing such models ... is easy"。**这是它相对质疑方并不更强的地方** | §VI 第 1 段 | 【读码】 |
+| 8 | **它另外主动开了一个新赌注（与 strong CP 争议本身无关但更有意思）**：Chern–Weil 反常对应一个 (−1)-form 全局对称性；量子引力无精确全局对称 ⇒ 该对称必被规范（引入轴子）或被破缺 ⇒ **IR 的 θ+θ̄ 由 UV 动力学决定、可计算**。原文称之为 "We conjecture"。⇒ 这条是【推断】级猜想，不是结论 | §VI 第 2–3 段 | 【读码】（内容为作者自标 conjecture） |
+
+**逐条回击我在 P2 里列的三条可攻击面（这是 P3 的原定目标）**：
+
+| P2 列出的攻击面 | 2510.18951 有没有回应 | 判定 |
+|---|---|---|
+| ① 跨扇区不可归一化态在物理上是否真不可接受 | **没有正面回应**。它只在等价意义上做类比：环上粒子在有限 β 下 Q 求和完全良定义（Eq.37 下方原话），**但没有讨论"跨扇区叠加是否可归一化"这条正则希尔伯特空间标准** | ❌ 未回应 |
+| ② (78) 式 `U(|x|)→const` 该不该保留 | **没有回应**。全文完全没有讨论 Minkowski 空间的边界条件假设 | ❌ 未回应 |
+| ③ 纯 YM 结论能否外推到含费米子 | **只间接碰到**：它的 ①②③④⑤ 全部在"含费米子的 QCD/ChPT"语境下，**等于默认费米子在**；但没有针对 2403.00747"无费米子"这一点说一句话 | ⚠️ 侧击，非正面 |
+
+**⇒ 对 6.1 节的实质影响（三条新判断）**：
+
+1. **必须在 6.1 里明确写一句："辩护方这篇的主战场不是 Caveat 1。"** 我上一版把 2510.18951 放在"两条质疑的统一反驳方"位置，
+   **这是不准确的**。读完全文可见它的批驳对象是 2404.16026（Caveat 2 一系），而 **Caveat 1 至今没有任何一篇正面回应**——
+   这与综述说的 "Caveat 1 has received comparatively less scrutiny" **互相印证，而且原因现在有了：不是被驳倒了，是没人正面接手**。
+2. **它的反驳力度比摘要看起来弱**：摘要口气是 "we critically examine ... demonstrating that a nonzero neutron EDM ... follows directly from well-understood QCD dynamics"，
+   但正文最硬的部分是从**教科书结论 + 环上粒子模型 + η′ 质量实测**三处出发，**全部是"你的顺序会给出与已知物理矛盾的结果"**，
+   属于**归谬式**反驳，而不是对"无穷体积极限下边界条件应该怎么给"这一**公理层主张**的直接驳倒。**原摘要那句"demonstrating ... directly from well-understood QCD dynamics"偏强**。
+3. **§VI 那条 Chern–Weil 猜想值得单列进结论文档**：它给出了一个与"this debate"框架不同的第三条路——不是"θ 可不可观测"，
+   而是"**θ+θ̄ 在量子引力下必然可计算**"。若这条成立，Caveat 1/2 的整个争论会**失去实践意义**（有个可算的 UV 值）。
+   **但必须标成作者的 conjecture**，不能当结论引用。
+
+**P2 · 2026-11-25 升级为【读码】：2403.00747 v1 全文已通读。**
+PDF 取件【实测】：`curl -x socks5h://127.0.0.1:10808 -L https://arxiv.org/pdf/2403.00747v1` → HTTP 200，
+559,963 B，`file` 报 **6 page(s)**（v2/v3/v4 均 HTTP 404，**无更新版本**；arXiv 页码 1–36）。
+`pdftotext -layout` 抽出 112,942 字符，§1–§11 与附录 A 全部逐节读完。
+
+**摘要 vs 正文：结论方向一致（「observables ... do not violate charge-parity symmetry」），
+但摘要省略了三条决定性信息**：① 论证的支点是「态可归一化」这条额外公理，不是任何计算；
+② 论证只用纯 Yang–Mills SU(2) 且完全没碰费米子质量相位 Arg Det M_q；
+③ 论文承认该结果与格点实的 β 项不符，只声称格点设定「与正则密度矩阵迹不对应」。
+⇒ **第六节 Caveat 1 的表述必须改**（旧表述「不存在基矢不变量 θ 参数」不准确，见下第 5 条）。
+
+**论文在做什么（一句话）**：在 T³ 空间三环（正则量子化）+ 四维环 T⁴（有限温度配分函数）上，
+做「先量子化后约束」的时序规范（A₀=0）量子化，**论证要求「完全规范固定 + 观测算符保持厄米」
+会把物理希尔伯特空间压到只剩一个 θ⁽ⁱ⁾ 值**——恰好与哈密顿量里的 θ−θ_Π 抵消，于是无 CP 破坏。
+
+| # | 正文实际说了什么（关键措辞均原文） | 位置 | 依据 |
+|---|---|---|---|
+| 1 | **论证的核心是「归一化性」这条公理，不是计算**：作者明确二选一——Option (a) 用 (37) 式内积（跨扇区积分，含冗余），但那样态 "are **not properly normalizable** ... not members of a Hilbert space, and taking these as physical states would be **in conflict with the postulates of quantum mechanics**"；Option (b) 死守 (30) 式规范固定内积。"the present work, we take the view that **Option (b) is the correct path**"。**这一步是取舍，不是证明** | §5 | 【读码】 |
+| 2 | **作者自承这是主流之外的立场**："the **vast majority of papers** ... follow Option (a) ... save Refs. [11, 18]"——**全文只把 2 篇文献算在自己一边**（[11]=Okubo–Marshak 1992，[18]=Gracia-Bondía–Várilly） | §5 | 【读码】 |
+| 3 | **核心约束由「不可区分」导出 δ/δA(σ_gauge)=0**：要求 (i) 能固定规范、(ii) 厄米性、(iii) 观测值不依赖规范选择 ⇒ 由 Eq.(41) 推出所有态共享同一相位 φ[A]、再推出对角基中 μ=0。**关键一步是非阿贝尔群下 "φ[AU] ≡ 0"**（群表示乘法性），这一步只在纯规范场下走通 | §6 Eqs.(41)(49)–(54) | 【读码】 |
+| 4 | **分界线全押在一个假设上**：对 Minkowski 空间，作者自己点名限制 (78) 式 `U(|x|)→const` 是 "**only a hypothesis** that is discussed e.g. in the classic review [16]"，并主动「lift」它；且 "**there is no principle forcing us to have periodic gauge potentials** even on the torus"（§8）。⇒ **结果能否用于真实 R³ 完全取决于要不要丢掉这个被称为假设的限制**。这正是争论中的那个边界条件 | §5、§8、§9 Eq.(78)、§11 | 【读码】 |
+| 5 | **旧表述说错了：不是「不存在 θ 参数」，而是「θ⁽ⁱ⁾ 被定死」**。正文说 "only one value of θ⁽ⁱ⁾ (modulo 2π) is **admissible**"、"the **remaining** Hilbert space"——是**希尔伯特空间受限、相位被 pin 到抵消值**（"the phase θ⁽ⁱ⁾ ... is **pinned** in such a way that it cancels the phase θ−θ_Π"），不是 θ 消失。路径积分里 θ 项被 "cancelled by the **correlated phases of the wave functionals**" —— **是相消，不是删除** | §5、§8、§11 | 【读码】 |
+| 6 | **只写纯 Yang–Mills SU(2)，没有费米子**：明文 "we colloquially refer to ... SU(2) as quantum chromodynamics (QCD)"、"(When introducing fermions, which **we do not consider in the present work**, there is an additional angular parameter from the Dirac mass.)"。⇒ **Caveat 1 对 θ̄ ≡ θ_QCD + Arg Det M_q 的适用性是空的**：这篇根本没拿到 θ̄ 那一层 | 摘要、§1、§5 | 【读码】 |
+| 7 | **反而指控格点设定用错对象**："the partition functions usually implemented in **lattice studies** ... weight the individual topological sectors with exp(−iθ). According to the present analysis, such setups **do not correspond to an evaluation of the trace of the canonical density matrix**"。即：格点把 e^{−iθ} 因子的做法被直接判为非正则迹（对应 Eq.(75) 里 θ 不出现）。但没有任何新实验预言 | §8 Eq.(75) | 【读码】 |
+| 8 | **无新可测预言，且无退让空间**：全文无任何新的可检验量；结局是「全部 CP 相位相消」。于是与 2001.07152 不同，此篇**没有留在现有数据上的退路**：不是「θ̄ 可能小」，是「根本不存在能观到 CP 破缺」。**这是最强也最脆的一种主张** | §11 | 【读码】 |
+
+**⇒ 对第六节判断的影响（必须改，不是补权重）**：
+
+- **旧表述修正**：原写「**不存在基矢不变量 θ 参数**」—— **不准确，已改**。准确说法是：
+  「一个多余参数 θ⁽ⁱ⁾ 被归一化性公理**定死**，θ 项与波函数相位**相消**；θ 作为参数仍存在，只是不可观测」。
+  这个差别很重要：前者听起来像「推导出 θ 不存在」，后者才是正文所写。
+- **它的可攻击面是「公理 + 适用范围」，不是「推导」**：第 1 条（归一化性）是取舍，第 4 条（边界条件 (78)）是自认的 hypothesis，第 6 条（无费米子）是适用范围。
+  **反驳路径有三条并列**：① 跨扇区不可归一化态在物理上是否真的不可接受（主流用一个 (2π)³δ³(0) ≈ V 的操作类比宽恕它，论文自己也提到但说「not clear and may not be possible」）；
+  ② (78) 式限制该不该保留；③ 纯 YM 结论能否移到含费米子的真实 QCD——**作者自己没做这一步**。
+- **与 Caveat 2 的关系要写清**：本文 §5 结尾与 §9 都靠引 [4]（=2001.07152）把结论延伸到无穷空间/连续时间。
+  即 **Caveat 1 在无穷体积极限上的版本是搭在 Caveat 2 上的**；两者不是两条独立路径，是一主一辅。
+- **成熟度权重修正**（与 6.1 ③ 一致但要加重）：综述说 Caveat 1「received comparatively less scrutiny」——
+  读完全文后更明白了为什么：它**连「θ̄ 可观测」都没打，只打了「θ 一个角」**，且只覆盖纯规范场，
+  大多数研究者可以合理地不把它当作针对 θ̄ 的论证。
 
 ### 6.1 这个争议的当前状态（这是本节最重要的部分）
 
@@ -245,9 +328,14 @@ arXiv:2609.00620 的 Part IV 直接问：「Is there really a strong CP problem?
 | 阵营 | 代表 | 主张 |
 |---|---|---|
 | 质疑方 | Ai–Garbrecht–Tamarit（[11][14][16][24]）等 | 常规 θ̄ 依赖建立在两个未经证明的假设上 |
-| 辩护方 | Benabou–Hook–Manzari–Murayama–Safdi, **arXiv:2510.18951**「Clearing up the Strong CP problem」 | 传统表述是对的 |
+| 辩护方 | Benabou–Hook–Manzari–Murayama–Safdi, **arXiv:2510.18951**「Clearing up the Strong CP problem」【读码 2026-11-25】 | 传统表述是对的；**但批驳对象只有 2404.16026（Caveat 2 一系），对 Caveat 1（2403.00747）正文零回应** |
 | 回应 | **arXiv:2511.04216**「Reply to *Clearing up the Strong CP problem*」 | 逐条反驳 |
 | 其他反驳 | Khoze [25]、Bhattacharya [26] 等 | 不同角度 |
+
+**⚠️ 读完全文后的修正（2026-11-25）**：上表原把 2510.18951 摆在"两条质疑的统一辩护方"位置，**不准确**。
+它的 §V "There is a Strong CP problem" 只点名打 ref [32]（=2404.16026），2403.00747 仅列于参考文献 [29]。
+⇒ **Caveat 1 至今无任何一篇正面回应**——这与综述 "has received comparatively less scrutiny" 相互印证，
+而且现在知道了原因：**不是被驳倒，是没人正面接手**。详见下方 P3 段。
 
 **综述原话（§13 末）**：
 
@@ -310,7 +398,7 @@ arXiv:2609.00620 的 Part IV 直接问：「Is there really a strong CP problem?
 | Q4 | 各方案是解释还是改名 | **改写中**：判据已立，见第 5 节 |
 | Q5 | 1.18 vs 1.208 的 2.3% | **已结**：用的是 2.46 不是 2.4 |
 | Q6/#7 | 取 Yukawa 实相位时 θ 与 θ̄ 能否区分 | **待解**：需读格点 Methods 附录 |
-| Q8 | 第 6 节两条质疑的原文 | **部分已读全文**：2001.07152（v5 全文 27 页）✅ 2026-11-24；2403.00747 / 2404.16026 仍**未读全文** |
+| Q8 | 第 6 节两条质疑的原文 | **大部分已读全文**：2001.07152（v5 全文 27 页）✅ 2026-11-24；2403.00747（v1 全文 6 页，仅纯 YM SU(2)，未含费米子）✅ 2026-11-25；2404.16026 仍**未读全文**。⚠️ Caveat 1 对 θ̄ 的适用性原文未覆盖，属外推 |
 | Q9 | 这场争论谁对 | **无法判定**：双方判据尚未建立，综述明确"no generally accepted resolution" |
 
 **真问题，我目前没有答案**：
@@ -328,7 +416,7 @@ arXiv:2609.00620 的 Part IV 直接问：「Is there really a strong CP problem?
 | 【实测】 | 有外部源原文：PSI 1.8（原文逐字）、ILL 2.9（原文逐字）、格点 0.0050(4)(8)（原文式 1/18）、综述 §6.1/§8.3/§9.8/§13.x |
 | 【复算】 | 本仓库脚本跑出的数：3.60e-11 / 3.68e-11 / 1.18 的反解 / N ≳ 8.7e¹⁰ |
 | 【读码】 | 读过原文全篇后的结构判断（如"论文未给 Arg Det M_q 数值"） |
-| 【推断】 | `2.46e-16` 的原始出处（未核到）；第 6 节两条质疑是否成立（只读到综述转述） |
+| 【推断】 | `2.46e-16` 的原始出处（未核到）；第 6 节两条质疑**是否成立**（原始文献已读，但成立与否仍无判定——见 Q9） |
 
 **已守的边界**：
 
@@ -366,7 +454,7 @@ python3 scripts/q2_q3_q4_resolve.py
 | **Status of the strong CP problem** | **arXiv:2609.00620** | §6.1 解法分类、§8.3 NB quality、§9.8 轴子质量、§11.3 实验、§13 反向质疑 |
 | Discrete θ Projection | arXiv:2603.05195 | `|θ̄| ≤ π/N`（式 3.6）、clockwork、cusp 预言 |
 | Ai, Cruz, Garbrecht, Tamarit | arXiv:2001.07152 / PLB 822, 136616 | **极限顺序**质疑（Caveat 2 原始文献） |
-| Ai, Garbrecht, Tamarit | arXiv:2403.00747 | **规范冗余**质疑（Caveat 1 原始文献） |
+| Ai, Garbrecht, Tamarit | arXiv:2403.00747 (v1) | **规范冗余**质疑（Caveat 1 原始文献）；纯 YM SU(2) T³/T⁴ 正则量子化，**未含费米子** |
 | Ai, Garbrecht, Tamarit | arXiv:2404.16026 / Universe 10(5) 189 | 对反对意见的回应 |
 | Benabou, Hook, Manzari, Murayama, Safdi | arXiv:2510.18951 | 「Clearing up the Strong CP problem」——**辩护方** |
 | Pospelov–Ritz | PRL 83, 2526 (1999) | sum rule 系数 2.4×10⁻¹⁶ |
