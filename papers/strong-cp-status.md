@@ -2,7 +2,7 @@
 
 **一份把可复算结论与开放问题分开摆放的位置陈述**
 
-版本：2026-11-24 ｜ 许可：CC BY 4.0
+版本：2026-11-24（rev.2，补全综述 §14–15 + 核实辩论双方原始文献）｜ 许可：CC BY 4.0
 
 ---
 
@@ -206,21 +206,78 @@ arXiv:2609.00620 的 Part IV 直接问：「Is there really a strong CP problem?
 
 它质疑的不是最后一步（θ̄ 依赖 → CP 破坏观测量，这步无争议），而是**前面几步**：
 
-| 质疑 | 内容 | 出处 |
+| 质疑 | 内容 | 原始文献（已核） |
 |---|---|---|
-| **Caveat 1：规范冗余** | 传统 θ-vacuum 构造假设"可容许规范变换在空间无穷远处趋于常数"。**这个限制不在正则哈密顿形式里**。若不施加该限制，原本不同同伦类的变换可连续连接；配合完全规范固定 + 哈密顿量厄米性，物理态空间进一步受限，**结果观测量保持 CP** | §13.2 |
-| **Caveat 2：拓扑扇区与极限顺序** | Euclid 路径积分传统做法是**先对整数拓扑扇区求和（有限体积），再取无穷体积极限**。两个极限的顺序可能不交换，从而改变结果 | §13.3 |
+| **Caveat 1：规范冗余** | 传统 θ-vacuum 构造假设"可容许规范变换在空间无穷远处趋于常数"。**这个限制不在正则哈密顿形式里**。放开来后，配合完全规范固定 + 哈密顿量厄米性，物理态空间进一步受限，**不存在基矢不变量 θ 参数** | Ai, Garbrecht, Tamarit, **arXiv:2403.00747**「The QCD theta-parameter in canonical quantization」【实测·已核摘要】 |
+| **Caveat 2：拓扑扇区与极限顺序** | Euclid 路径积分传统做法是**先对整数拓扑扇区求和（有限体积），再取无穷体积极限**。该工作主张反过来：**先取无穷体积极限（固定拓扑荷），再求和**。此时质量项与瞬子效应的手征相位**对齐**，无额外相位时不产生 CP 破坏 | Ai, Cruz, Garbrecht, Tamarit, **arXiv:2001.07152**（PLB 822, 136616）【实测·已核摘要】 |
 
-**这条路的地位，我要说清**：
+**第二条的原摘要我读到了，逐字要点**：
 
-- 它**不是**"strong CP 问题已解决"，是"这个问题的表述可能建立在两个未被子证明的假设上"
-- 它的判据同样是可算的（哪一步在说什么、极限怎么取），**所以它符合本仓库的判据**
-- 但它目前**没有给出任何可测预言**——按第五节的标准，它甚至不是"改名"，是"重新审视问题"
+> "we therefore take the infinite-volume limit before summing over topological sectors. In contrast to the opposite order of limits, **the chiral phases from the mass terms and from the instanton effects then are aligned** so that, in absence of additional phases, these do not give rise to [CP violation]"
 
-**为什么还是要写**：如果只列六个"解决方案"而不提这个质疑，
-读者会以为"问题成立"是已确立的事实。**它不是——它是工作假设。**
+### 6.1 这个争议的当前状态（这是本节最重要的部分）
+
+**我上一版把这条写得太单薄了。补读全文后，必须改三处判断：**
+
+**① 这不是"一个人提出的新观点"，是一场有来有回的争论**
+
+| 阵营 | 代表 | 主张 |
+|---|---|---|
+| 质疑方 | Ai–Garbrecht–Tamarit（[11][14][16][24]）等 | 常规 θ̄ 依赖建立在两个未经证明的假设上 |
+| 辩护方 | Benabou–Hook–Manzari–Murayama–Safdi, **arXiv:2510.18951**「Clearing up the Strong CP problem」 | 传统表述是对的 |
+| 回应 | **arXiv:2511.04216**「Reply to *Clearing up the Strong CP problem*」 | 逐条反驳 |
+| 其他反驳 | Khoze [25]、Bhattacharya [26] 等 | 不同角度 |
+
+**综述原话（§13 末）**：
+
+> "Existing criticisms argue for the conventional formulation from the perspectives of finite-volume topology, fixed-topology ensembles, boundary data, chiral matching, and quantum-mechanical analogues, but **they do not yet provide a generally accepted resolution** of the gauge-theory-specific questions"
+
+> "**At present, there is no generally accepted resolution** of the underlying questions concerning the physical Hilbert space, the treatment of topological sectors, the order of limits, and the matching to low-energy chiral dynamics."
+
+**② 我原来写"这条质疑没有可测预言"——这句要改**
+
+更准确的说法是：**双方都拿已被测到的量当裁判，但都没提出新的、能杀死对方的测量。**
+
+争议焦点全是**已经测到的量怎么解释**：
+- 拓扑磁化率（topological susceptibility）与 η′ 质量
+- ChPT 的 θ̄ 依赖是否独立决定两种表述的取舍
+- 配分函数的体依赖、稀薄瞬子气体采样是否正确
+
+**具体分歧（综述 §13 记录）**：反驳方 [23] 用拓扑磁化率、η′ 质量、手征有效理论提出反对；
+回应方 [24] 主张「ACGT 方案里全局量 ⟨Δn²⟩/Ω 趋于零，**不应等同于**进入反常单态动力学的**局域**真空磁化率」，
+后者可保持非零。
+
+**⇒ 这不是"没有预言"，是"两种表述对同一批数据给出不同解读，而且判据尚未建立"。**
+比我上一版写的更严重，也更值得写进 status。
+
+**③ 两条质疑的成熟度不同，不能并列**
+
+| | 状态 |
+|---|---|
+| **Caveat 2（极限顺序）** | 综述明说：**"has attracted substantial attention and has become the main focus of the recent debate"** —— 受到大量关注，有正式发表（PLB）、有多轮交锋 |
+| **Caveat 1（规范冗余）** | 综述明说：**"has received comparatively less scrutiny"** —— 除 [14][18] 外关注较少 |
+
+**我上一版把两条并排放，是不准确的权重。**
+
+### 6.2 这一节的边界（必须写清）
+
+- **不是"strong CP 问题已解决"**，是"这个问题的表述可能建立在两个未经证明的假设上"
+- **常规表述仍是 QCD 唯象的主流框架**，Part I–III 的全部结论都建立在它上面
+- **若两条中任一条被确立，通常的强 CP 精细调节问题就需要重新考虑**（综述 §15 原话）
+- 但两条质疑**都保留了反常、费米零模、't Hooft 相互作用、局域拓扑涨落和 η′ 质量机制**——
+  它们不是"推翻 QCD"，是"重新安排全局拓扑信息如何进入局域观测量"
+- **本条目下没有任何一条能作为生产性依据**，只能作为"问题成立的边界条件"记录
 
 ---
+
+### 6.3 顺带一个必须承认的立场问题
+
+**综述作者 Wen-Yuan Ai，本身就是质疑方 [11][14][16][24] 的第一作者。**
+
+这不构成对内容的任何否定——综述本身把双方都写了，也明确说"没有公认结论"。
+但读者有权知道：**帮你综述这场争论的人，是争论的一方。**
+
+本文引用它时，凡涉及争议部分，我一律回查原始文献（见上表"已核"标注），不单靠综述转述。
 
 ## 七、开放问题（本仓库实际在追的）
 
@@ -232,7 +289,8 @@ arXiv:2609.00620 的 Part IV 直接问：「Is there really a strong CP problem?
 | Q4 | 各方案是解释还是改名 | **改写中**：判据已立，见第 5 节 |
 | Q5 | 1.18 vs 1.208 的 2.3% | **已结**：用的是 2.46 不是 2.4 |
 | Q6/#7 | 取 Yukawa 实相位时 θ 与 θ̄ 能否区分 | **待解**：需读格点 Methods 附录 |
-| — | 第 6 节两条质疑是否成立 | **未做**：需要读被引原文，不是二手转述能判的 |
+| Q8 | 第 6 节两条质疑的原文 | **已核摘要**（2001.07152 / 2403.00747 / 2404.16026），**未读全文** |
+| Q9 | 这场争论谁对 | **无法判定**：双方判据尚未建立，综述明确"no generally accepted resolution" |
 
 **真问题，我目前没有答案**：
 
@@ -255,8 +313,8 @@ arXiv:2609.00620 的 Part IV 直接问：「Is there really a strong CP problem?
 
 - 全文只谈数学结构与可检验性，**不评价任何研究者、动机、商业行为**
 - 第 6 节把"问题本身可能不成立"放进来，但**标注它目前无可测预言**，不夸大
-- 综述全文抓取有截断（ar5iv 与 arXiv HTML 都在 §13.4 处断），**第 14–15 章未读到**，
-  因此本文**不引用**这两章的任何内容
+- ~~综述全文抓取有截断，第 14–15 章未读到~~ → **已补全**：PDF 通道（2,570,489 B，`%%EOF` 校验通过，
+  `pdftotext -layout`，125 页 / 523,422 字符）。**§14–15 已读，本文已引用其结论**
 
 ---
 
@@ -286,6 +344,10 @@ python3 scripts/q2_q3_q4_resolve.py
 | nEDM from Lattice QCD | arXiv:2608.22587 | `d_n/θ̄ = −0.0050(4)(8)`、θ̄ 定义 |
 | **Status of the strong CP problem** | **arXiv:2609.00620** | §6.1 解法分类、§8.3 NB quality、§9.8 轴子质量、§11.3 实验、§13 反向质疑 |
 | Discrete θ Projection | arXiv:2603.05195 | `|θ̄| ≤ π/N`（式 3.6）、clockwork、cusp 预言 |
+| Ai, Cruz, Garbrecht, Tamarit | arXiv:2001.07152 / PLB 822, 136616 | **极限顺序**质疑（Caveat 2 原始文献） |
+| Ai, Garbrecht, Tamarit | arXiv:2403.00747 | **规范冗余**质疑（Caveat 1 原始文献） |
+| Ai, Garbrecht, Tamarit | arXiv:2404.16026 / Universe 10(5) 189 | 对反对意见的回应 |
+| Benabou, Hook, Manzari, Murayama, Safdi | arXiv:2510.18951 | 「Clearing up the Strong CP problem」——**辩护方** |
 | Pospelov–Ritz | PRL 83, 2526 (1999) | sum rule 系数 2.4×10⁻¹⁶ |
 
 ---
