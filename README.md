@@ -163,6 +163,9 @@ z=1100 时该临界值是 −2.24×10⁻⁹，而 A/B 给的是 −0.017 与 −
 PSI 原文直接给的是 **1.8×10⁻²⁶ @ 90% CL**，反推等效 z ≈ **1.61**，不是 1.645。
 3.68 是我用 σ_comb 自己又推了一遍——**原文已经给了数，多算这一步反而偏离原文口径**。差 2.2%。
 
+> **完整的当前位置陈述**：**[`papers/strong-cp-status.md`](papers/strong-cp-status.md)**
+> —— 六个候选方案的"解释 vs 改名"对照表、以及"这个问题本身可能不成立"那条路，都在里面。
+
 **但这条链上最大的不确定不是实验，是理论系数：**
 
 | 方法 | d_n/θ̄ (e·cm) |
@@ -291,6 +294,7 @@ arXiv:2603.05195 提出规范 Z_N ⊂ 2π 平移，强制 |θ̄| ≤ π/N。
 papers/
   running-vacuum.md       RVM 的 QFT 起源差 34 个量级
   theta-bar-qcd.md        θ̄ 上限全链复算
+  strong-cp-status.md     strong CP 当前位置陈述（六方案对照 + 反向质疑）
 scripts/
   rv_recompute.py         RVM 自洽方程与判据
   theta_bar_chain.py      nEDM → θ̄ 全链
