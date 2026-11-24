@@ -215,6 +215,27 @@ arXiv:2609.00620 的 Part IV 直接问：「Is there really a strong CP problem?
 
 > "we therefore take the infinite-volume limit before summing over topological sectors. In contrast to the opposite order of limits, **the chiral phases from the mass terms and from the instanton effects then are aligned** so that, in absence of additional phases, these do not give rise to [CP violation]"
 
+**2026-11-24 升级为【读码】：2001.07152 全文（v5，27 页 PDF，含补充材料）已逐节通读。**
+摘要与正文一致，上面那段转述**不需要修改**。以下是全文里摘要看不到、但决定这条质疑分量的五件事：
+
+| # | 正文说了什么 | 位置 | 依据 |
+|---|---|---|---|
+| 1 | 论文给出的**不是"θ 可被消掉"的推导，而是一条"边界条件公理"**："the path integral receives its nonvanishing contributions from saddle points of finite action and fluctuations about these, boundary conditions in Euclidean space should be imposed **at infinity before the summation over topological sectors**"。**这一步是原理性主张，不是计算结果** | §1 引言、§6 结论 | 【读码】 |
+| 2 | 作者自己承认这是**"should be"级别的规定**：结论句为 "**based on the reasoning that** ... the conclusion then is..."。他们没说常规顺序"错"，只说常规顺序"would recover CP-violating correlations proportional to θ̄"——**分歧点是公理选择，不是算错** | §6 结论 | 【读码】 |
+| 3 | 那句让很多评论者停下的话："Taking Ω → ∞ before summing over different topological sectors may therefore be viewed to be **equivalent with setting Δn = 0 from the outset**"。作者进一步说：一个局域观测者（"a local excitation of fields"）**只会看到单一的 Δn**，跨扇区干涉要靠有权限访问全部扇区的 "**super-observers**" | §5、§S3.3 | 【读码】 |
+| 4 | 由此推出一条**非常强硬、可被反驳的物理后果**：固定 Δn 的观测者看到的 nEDM "depends on Δn but is **independent of θ̄**"；并因此断言全局拓扑磁化率 ⟨Δn²⟩/Ω **在 Ω→∞ 时整体趋于零**。为调和 η′ 质量，他们把 η′ 质量归到**有限子体积 Ω₁⊂Ω（边界拓扑流不守恒）**的磁化率上——这正是辩护方 2510.18951 攻击的位置 | §S5.4、§S3.3 | 【读码】 |
+| 5 | **配分函数在 θ̄ 上的解析性被主动放弃**：Z 依赖变成"周期 δ 函数"式非解析形式；作者明说"the partition function itself is not observable, and the singular limit is not pathological"。**整篇结论完全依赖稀薄瞬子气体（dilute instanton gas）领头阶**——一个在真实 QCD 里不成立的近似 | §S3.4、§S3 + 全文方法段 | 【读码】 |
+
+**⇒ 对第六节判断的影响（不推翻，但要补权重）**：
+
+- 上一版把这条写成"质疑方主张先取无穷体积极限"是对的，**但漏了它真正的内容**：这实质上是在主张
+  **"θ̄ 不是一个局域可观测的相位；nEDM 依赖的是 Δn 而非 θ̄"**。这比"极限顺序之争"强得多，也危险得多。
+- 由于第 1、2、5 点，**这条质疑的可攻击面在"公理 + 近似"，而不在"推导"**。任何反驳必须先撞
+  ①无穷远处边界条件该不该是纯规范、②稀薄瞬子气体能否代表真实 QCD、③Ω→∞ 与子体积 Ω₁ 的磁化率
+  是否真的可分——这三点恰好就是 2510.18951 的落点（P3 待读，届时逐条对照）。
+- 本节原写"**双方都拿已被测到的量当裁判，但都没提出新的、能杀死对方的测量**"——**保留不改**：
+  读完全文后这句更站得住，因为第 3、4 点恰恰是**在重新解释同一个 eDM / 磁化率数据**。
+
 ### 6.1 这个争议的当前状态（这是本节最重要的部分）
 
 **我上一版把这条写得太单薄了。补读全文后，必须改三处判断：**
@@ -289,7 +310,7 @@ arXiv:2609.00620 的 Part IV 直接问：「Is there really a strong CP problem?
 | Q4 | 各方案是解释还是改名 | **改写中**：判据已立，见第 5 节 |
 | Q5 | 1.18 vs 1.208 的 2.3% | **已结**：用的是 2.46 不是 2.4 |
 | Q6/#7 | 取 Yukawa 实相位时 θ 与 θ̄ 能否区分 | **待解**：需读格点 Methods 附录 |
-| Q8 | 第 6 节两条质疑的原文 | **已核摘要**（2001.07152 / 2403.00747 / 2404.16026），**未读全文** |
+| Q8 | 第 6 节两条质疑的原文 | **部分已读全文**：2001.07152（v5 全文 27 页）✅ 2026-11-24；2403.00747 / 2404.16026 仍**未读全文** |
 | Q9 | 这场争论谁对 | **无法判定**：双方判据尚未建立，综述明确"no generally accepted resolution" |
 
 **真问题，我目前没有答案**：
