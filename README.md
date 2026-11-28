@@ -208,6 +208,28 @@ PSI 原文直接给的是 **1.8×10⁻²⁶ @ 90% CL**，反推等效 z ≈ **1.
 
 ---
 
+### 战线 ② 深化：C 体系的九轮对话（2026-11-27）
+
+[`papers/origin-system-nine-rounds.md`](papers/origin-system-nine-rounds.md)
+
+11-25 那轮是五轮对抗、13 笔错。11-27 这九轮（R79–R88）做了一件方法上更难的事：**把判据变成双方签认的冻结条款集（C1–C8），然后一条未翻。**
+
+| 增量 | 内容 | 依据 |
+|---|---|---|
+| **共识可冻结** | C1–C8 八条，翻案须交新证据；不再每轮重吵判据 | 【复算】 |
+| **系数三连** | π→2π、λ_thr→λ̄_C、ℏ→h 同一病三发 ⇒ 规矩：**数字与符号须由同一表达式打印** | 【复算】 |
+| **从判死到给靶** | 用被审者自己的门（1.2132 pm）算出 `2.471180e+20 Hz / 1.021998 MeV` = 2m_ec² | 【复算】 |
+| **能标鸿沟** | 1 bit 擦除 0.0179 eV vs 光生物质阈值 1.022 MeV = **5.70e7 倍（约 8 个数量级）** | 【复算】 |
+| **3a 活 / 3b 死** | JHEP 10(2023)172 给层级机制（真论文），但算不出 `m_μ/m_e = 206.7682830` | 【读码】 |
+| **丙′ 代价写全** | 唯一「已测+可比值」路线，代价 = 放弃统一全部质量，改强子/轻子分治 | 【推断】 |
+
+**25 项复算全部通过断言**（`python3 scripts/letter-recompute-appendix.py`，10 秒，只用标准库）。
+**本轮零【实测】、冻结案一条未翻**——这两个「没有」比任何数字都重要。
+
+三张配图（资料分层 / 三级台阶五路线 / 能标鸿沟看板）在 `papers/figures/`，由 `scripts/letter-verification-figures.py` 生成。
+
+---
+
 ## 我在这个过程中犯的错（公开记录）
 
 方法论只有靠犯错才能验证。以下是我自己抓出来的：
@@ -334,6 +356,8 @@ papers/
   running-vacuum.md       RVM 的 QFT 起源差 34 个量级
   theta-bar-qcd.md        θ̄ 上限全链复算
   strong-cp-status.md     strong CP 当前位置陈述（六方案对照 + 反向质疑）
+  origin-system-nine-rounds.md  C 体系九轮对话纪要（C1–C8 冻结 + 25 项复算 + 五级资料分层）
+  figures/                三张派生配图（资料分层 / 台阶五路线 / 能标鸿沟看板）
 reviews/
   README.md               战线②实战：三体系同一把尺子并排（含我自己认的 4 笔错）
   separate-restatement-from-prediction.md       对外传播版（不谈具体人、不谈具体材料）
@@ -342,6 +366,9 @@ scripts/
   theta_bar_chain.py      nEDM → θ̄ 全链
   q1_q5_resolve.py        Q1/Q5 结案复算（2026-11-24）
   q2_q3_q4_resolve.py     Q2/Q3/Q4 结案复算（PSI 口径 / Z_N 的 N / CP 相位判别表）
+  letter-recompute-appendix.py    九轮公开信 25 项复算（A–F 组，标准库，含断言）
+  letter-verification-figures.py  三张配图的生成脚本
+  p8_*.py / p9_*.py       强 CP 战线：Khoze/Aghaie 复算（θ̄≠0 与 log β）
 docs/
   protocol.md             三条硬规则的细则
   method.md               核验方法（战线②用：拆线/预注册/三条杀招/双向量尺）
